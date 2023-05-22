@@ -53,14 +53,7 @@ public class Main {
                 System.out.println(convertToRom.convert(a + b));
                 break;
             case "-":
-                try {
-                    System.out.println(convertToRom.convert(a - b));
-                } catch (Exception e) {
-                }
-                if ((a-b) == 0) {
-                    throw new Exception("давай ты не будешь вычитать равные римские цифры в ноль");
-                }
-
+              valid.ZeroCheck(a, b);
                 break;
             case "*":
                 System.out.println(convertToRom.convert(a * b));

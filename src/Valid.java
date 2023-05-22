@@ -1,6 +1,8 @@
 public class Valid {
 
     RomanToArabicConverter convertRomToArab = new RomanToArabicConverter();
+    ArabInRom convertToRom = new ArabInRom();
+
     public String[] lengh(String str) throws Exception {
         String[] arg = new String[0];
         try {
@@ -59,6 +61,20 @@ public class Valid {
             throw new Exception("Числа должны быть от 1 до 10 включительно");
         }
         return b;
+    }
+
+    public void ZeroCheck(int x, int y) throws Exception {
+        try {
+//            System.out.println(convertToRom.convert(x - y));
+
+        } catch (Exception e) {
+        }
+        if ((x-y) <= 0 ) {
+            throw new Exception("давай ты не будешь вычитать равные римские цифры в ноль и уходить в минус");
+        }
+
+        System.out.println(convertToRom.convert(x - y));
+
     }
 
 }
